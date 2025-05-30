@@ -19,4 +19,3 @@ def about_page():
         return f"Error rendering about: {e}"
 
 
-app.run()
