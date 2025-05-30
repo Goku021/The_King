@@ -4,14 +4,19 @@ app = Flask(__name__)
 
 
 @app.route('/')
-def index_page():  # put application's code here
-    return render_template('index.html')
+def index_page():
+    try:
+        return render_template('index.html')
+    except Exception as e:
+        return f"Error rendering index: {e}"
 
 
-@app.route("/about")
+@app.route('/about')
 def about_page():
-    return render_template("about.html")
+    try:
+        return render_template('about.html')
+    except Exception as e:
+        return f"Error rendering about: {e}"
 
 
-if __name__ == '__main__':
-    app.run()
+app.run()
