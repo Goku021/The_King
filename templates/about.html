@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>About Me & Projects - The King</title>
+    <link rel="stylesheet" href="../static/css/output.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet">
+    <style>
+        @keyframes typing {
+            from {
+                width: 0
+            }
+
+            to {
+                width: 100%
+            }
+        }
+
+        @keyframes blink {
+            50% {
+                border-color: transparent;
+            }
+        }
+
+        .typing {
+            white-space: nowrap;
+            overflow: hidden;
+            border-right: 2px solid white;
+            width: 0;
+            animation: typing 3s steps(40, end) forwards, blink 0.8s step-end infinite;
+        }
+
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fadeInUp {
+            animation: fadeInUp 1s ease forwards;
+        }
+    </style>
+</head>
+
+<body class="bg-black text-white font-sans relative overflow-x-hidden">
+
+<script>
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    menuBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+    });
+</script>
+
+<video autoplay muted loop playsinline class="absolute top-0 left-0 w-full h-full object-cover -z-10">
+    <source src="../static/videos/burning-earth.3840x2160.mp4" type="video/mp4"/>
+</video>
+<nav class="w-full px-5 py-4  backdrop-blur-md border-b border-none bg-gray-800 shadow-lg z-50">
+    <div class="max-w-7xl mx-auto flex items-center justify-between">
+
+        <!-- Logo & Brand -->
+        <div class="flex items-center space-x-4">
+            <!-- Glowing logo -->
+            <div class="relative">
+                <div class="absolute inset-0 rounded-full bg-purple-600 opacity-30 blur-2xl animate-pulse z-0">
+                </div>
+                <img src="../static/images/king_logo.jpg" alt="King Logo"
+                     class="relative z-10 w-14 h-14 rounded-full border-2 border-white/20 shadow-md">
+            </div>
+            <h1
+                    class="text-3xl font-bold bg-gradient-to-r from-pink-400 via-purple-500 to-indigo-500 text-transparent bg-clip-text tracking-wide drop-shadow-md">
+                The King
+            </h1>
+        </div>
+
+        <!-- Nav Items -->
+        <div class="hidden md:flex space-x-10 text-white font-medium text-lg">
+            <a href="/" class="relative group">
+                <span class="text-sky-300 group-hover:text-white transition">Home</span>
+                <span
+                        class="absolute left-0 bottom-0 w-0 h-[2px] bg-gradient-to-r from-sky-400 to-blue-600 group-hover:w-full transition-all duration-500"></span>
+            </a>
+
+            <a href="/about" class="relative group">
+                <span class="text-sky-300 group-hover:text-white transition">About Me</span>
+                <span
+                        class="absolute left-0 bottom-0 w-0 h-[2px] bg-gradient-to-r from-purple-400 to-pink-600 group-hover:w-full transition-all duration-500"></span>
+            </a>
+
+            <a href="#" class="relative group">
+                <span class="text-sky-300 group-hover:text-white transition">Contact Me</span>
+                <span
+                        class="absolute left-0 bottom-0 w-0 h-[2px] bg-gradient-to-r from-emerald-400 to-teal-500 group-hover:w-full transition-all duration-500"></span>
+            </a>
+        </div>
+
+        <!-- Optional: Mobile Hamburger -->
+        <div class="md:hidden text-white text-3xl">
+            ☰
+        </div>
+    </div>
+</nav>
+
+<div class="min-h-screen px-6 py-10 flex flex-col gap-16 items-center justify-center relative z-10">
+
+    <div class="text-center my-10">
+        <h1
+                class="text-4xl sm:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-sky-400 via-blue-500 to-indigo-500">
+            <span id="typing-text" class="inline-block"></span><span class="blinking-cursor">|</span>
+        </h1>
+    </div>
+
+    <!-- About Me Card -->
+    <div
+            class="bg-white/5 backdrop-blur-2xl border border-white/10 rounded-3xl shadow-2xl max-w-5xl mx-auto p-8 sm:p-12 transition duration-300 hover:shadow-blue-400/30">
+        <div class="flex flex-col md:flex-row items-center gap-10">
+            <img src="../static/images/my_profile_pic.jpg" alt="Sagar Khatri"
+                 class="w-96 h-80 rounded-full border-none  shadow-xl hover:scale-105 transition-transform duration-300"/>
+
+            <div>
+                <h2
+                        class="text-4xl font-extrabold bg-gradient-to-r from-sky-400 via-blue-400 to-indigo-400 text-transparent bg-clip-text mb-2">
+                    Sagar Khatri
+                </h2>
+                <p class="text-white/80 text-lg mb-3">
+                    Age: <span class="font-bold">23</span> | Email:
+                    <a href="mailto:sagar@example.com"
+                       class="text-sky-400 hover:underline">khatrisagar415@gmail.com</a>
+                </p>
+                <p class="text-white/70 leading-relaxed">
+                    I’m not just another developer — I architect digital empires. A full-stack sorcerer conjuring
+                    clean
+                    design with bulletproof backend logic. I believe in building what matters and crafting code that
+                    inspires.
+                </p>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Skills -->
+    <div class="max-w-5xl w-full text-center fadeInUp">
+        <h2 class="text-3xl font-bold text-white mb-6">🧠 Skills</h2>
+        <div class="flex flex-wrap justify-center gap-4 text-white/90 text-lg">
+            <span class="bg-white/10 backdrop-blur px-4 py-2 rounded-xl">Python</span>
+            <span class="bg-white/10 backdrop-blur px-4 py-2 rounded-xl">Dart & Flutter</span>
+            <span class="bg-white/10 backdrop-blur px-4 py-2 rounded-xl">C++</span>
+            <span class="bg-white/10 backdrop-blur px-4 py-2 rounded-xl">Java</span>
+            <span class="bg-white/10 backdrop-blur px-4 py-2 rounded-xl">Spring Boot</span>
+            <span class="bg-white/10 backdrop-blur px-4 py-2 rounded-xl">Django</span>
+            <span class="bg-white/10 backdrop-blur px-4 py-2 rounded-xl">Flask</span>
+        </div>
+    </div>
+
+    <!-- Projects Section -->
+    <div class="max-w-6xl w-full text-center fadeInUp">
+        <h2 class="text-3xl font-bold text-white mb-6">🚀 Projects</h2>
+        <div class="grid md:grid-cols-2 gap-8">
+
+            <!-- Project Card 1 -->
+            <div class="bg-white/10 backdrop-blur-md p-6 rounded-xl border border-white/20 shadow-md text-left">
+                <h3 class="text-2xl font-bold text-sky-300">🌿 EcoKartavya</h3>
+                <p class="text-white/80 mt-2">A dynamic eco-tracking web app with dashboards, user points, carbon
+                    credits, and a visually rich UI. Built using Django, Tailwind CSS, and animations for
+                    hackathon-winning impressions.</p>
+            </div>
+
+            <!-- Project Card 2 -->
+            <div class="bg-white/10 backdrop-blur-md p-6 rounded-xl border border-white/20 shadow-md text-left">
+                <h3 class="text-2xl font-bold text-purple-300">📺 News Application</h3>
+                <p class="text-white/80 mt-2">A news Application where users can read daily updated news, and know
+                    what happining in the world</p>
+            </div>
+
+            <!-- Project Card 3 -->
+            <div class="bg-white/10 backdrop-blur-md p-6 rounded-xl border border-white/20 shadow-md text-left">
+                <h3 class="text-2xl font-bold text-green-300">📱 Flutter Stock Tracking App</h3>
+                <p class="text-white/80 mt-2">A sleek personal Stock tracker built with Flutter and Riverpod.
+                    Real-time graphs, transactions, analytics — all in a dark-mode elegant UI.</p>
+            </div>
+
+            <!-- Project Card 4 -->
+            <div class="bg-white/10 backdrop-blur-md p-6 rounded-xl border border-white/20 shadow-md text-left">
+                <h3 class="text-2xl font-bold text-yellow-300">🕹️ 2D Java Game</h3>
+                <p class="text-white/80 mt-2">A polished Java Swing-based 2D game with animation, enemy logic, sound
+                    effects, and a menu system. Hand-coded pixel perfection.</p>
+            </div>
+        </div>
+    </div>
+
+</div>
+<script>
+    const text = "Hey, I'm The CEO OF The King  👑";
+    let index = 0;
+
+    function typeText() {
+        const target = document.getElementById("typing-text");
+        if (index < text.length) {
+            target.textContent += text.charAt(index);
+            index++;
+            setTimeout(typeText, 80); // Reduced time for quicker typing
+        }
+    }
+
+    window.onload = typeText;
+</script>
+
+<style>
+    .blinking-cursor {
+        animation: blink 1s step-start infinite;
+        color: white;
+    }
+
+    @keyframes blink {
+        50% {
+            opacity: 0;
+        }
+    }
+</style>
+
+</body>
+
+</html>
